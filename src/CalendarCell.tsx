@@ -1,14 +1,14 @@
 import ContentEditable from "./ContentEditable"
 
-function CalendarCell({ day }: { day: number }) {
+function CalendarCell({ day, month, year }: { day: number, month: number, year: number }) {
   return (
     <div className="flex flex-col p-0.5 relative">
       <span className="absolute left-2 top-1 text-sm">{day}</span>
       <div className="h-15 bg-amber-200">
-        <ContentEditable />
+        <ContentEditable ampm="am" day={day} month={month} year={year} />
       </div>
       <div className="h-15 bg-blue-100">
-        <ContentEditable />
+        <ContentEditable ampm="pm" day={day} month={month} year={year} />
       </div>
     </div>
   )

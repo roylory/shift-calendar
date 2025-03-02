@@ -56,7 +56,7 @@ function Calendar() {
           ))}
           {Array.from({ length: new Date(currentYear, currentMonth + 1, 0).getDate() }).map((_, index) => (
             <div key={index} className="w-1/7 h-30 mb-1">
-              <CalendarCell day={index + 1} />
+              <CalendarCell day={index + 1} month={currentMonth} year={currentYear} />
             </div>
           ))}
         </div>
