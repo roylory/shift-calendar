@@ -33,15 +33,15 @@ function Calendar() {
           onClick={goToPreviousMonth}
           className="cursor-pointer print:hidden hover:bg-gray-200 rounded-full p-1"
         >
-          <ChevronLeftIcon className="w-6 h-6" />
+          <ChevronLeftIcon className="w-6 h-6 text-gray-700" />
         </button>
-        <h2 className="text-2xl text-center m-4">{currentMonthString} {currentYear}</h2>
+        <h2 className="text-2xl text-center m-4 text-gray-600">{currentMonthString} {currentYear}</h2>
         <button onClick={goToNextMonth} className="cursor-pointer print:hidden hover:bg-gray-200 rounded-full p-1">
-          <ChevronRightIcon className="w-6 h-6" />
+          <ChevronRightIcon className="w-6 h-6 text-gray-700" />
         </button>
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex w-full justify-around">
+        <div className="flex w-full justify-around text-gray-700">
           <div className="text-center w-1/7">Sun</div>
           <div className="text-center w-1/7">Mon</div>
           <div className="text-center w-1/7">Tue</div>
