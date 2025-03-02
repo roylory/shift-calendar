@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important; /* Safari/Chrome */
+    print-color-adjust: exact !important; /* Standard */
+  }
+}
