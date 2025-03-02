@@ -14,7 +14,7 @@ function ContentEditable({ ampm, day, month, year }: ContentEditableProps) {
       contentEditable
       spellCheck="false"
       autoCorrect="false"
-      className="text-xs w-full h-full p-0 text-center resize-none flex justify-center items-center leading-none"
+      className="w-full h-full p-0 text-center resize-none flex justify-center items-center leading-none text-[10px] md:text-xs"
       onBlur={(e) => setText(e.currentTarget.innerHTML)}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
