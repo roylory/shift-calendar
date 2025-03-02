@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid"
+import CalendarCell from "./CalendarCell"
 
 function Calendar() {
   const today = new Date()
@@ -41,20 +42,22 @@ function Calendar() {
       </div>
       <div className="flex flex-col items-center">
         <div className="flex w-full justify-around">
-          <div className="text-center">Sun</div>
-          <div className="text-center">Mon</div>
-          <div className="text-center">Tue</div>
-          <div className="text-center">Wed</div>
-          <div className="text-center">Thu</div>
-          <div className="text-center">Fri</div>
-          <div className="text-center">Sat</div>
+          <div className="text-center w-1/7">Sun</div>
+          <div className="text-center w-1/7">Mon</div>
+          <div className="text-center w-1/7">Tue</div>
+          <div className="text-center w-1/7">Wed</div>
+          <div className="text-center w-1/7">Thu</div>
+          <div className="text-center w-1/7">Fri</div>
+          <div className="text-center w-1/7">Sat</div>
         </div>
         <div className="flex flex-wrap w-full">
           {Array.from({ length: new Date(currentYear, currentMonth, 1).getDay() }).map((_, index) => (
-            <div key={index} className="w-1/7 h-16"></div>
+            <div key={index} className="w-1/7 h-30 mb-1"></div>
           ))}
           {Array.from({ length: new Date(currentYear, currentMonth + 1, 0).getDate() }).map((_, index) => (
-            <div key={index} className="w-1/7 h-16 flex items-center justify-center">{index + 1}</div>
+            <div key={index} className="w-1/7 h-30 mb-1">
+              <CalendarCell day={index + 1} />
+            </div>
           ))}
         </div>
       </div>
