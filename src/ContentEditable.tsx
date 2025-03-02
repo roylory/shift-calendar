@@ -13,6 +13,7 @@ function ContentEditable({ ampm, day, month, year }: ContentEditableProps) {
     <div
       contentEditable
       spellCheck="false"
+      autoCorrect="false"
       className="text-xs w-full h-full p-0 text-center resize-none flex justify-center items-center leading-none"
       onBlur={(e) => setText(e.currentTarget.innerHTML)}
       onKeyDown={(e) => {
