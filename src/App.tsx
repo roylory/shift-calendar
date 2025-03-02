@@ -1,6 +1,10 @@
+import Calendar from "./Calendar"
+
 function App() {
   return (
-    <h1 className="text-xl">App</h1>
+    <div className="container mx-auto p-4">
+      <Calendar />
+    </div>
   )
 }
 
